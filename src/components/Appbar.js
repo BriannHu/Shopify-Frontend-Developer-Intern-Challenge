@@ -63,7 +63,6 @@ export default function Appbar(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("new selected: " + selectedDate);
     dispatch(updateStartDate(selectedDate, "yyyy-MM-dd"));
   }, [dispatch, selectedDate]);
 
@@ -106,6 +105,7 @@ export default function Appbar(props) {
             </Box>
             <Box className={classes.darkModeBox}>
               <IconButton
+                aria-label="theme-button"
                 className={classes.iconButton}
                 onClick={props.handleThemeChange}
               >

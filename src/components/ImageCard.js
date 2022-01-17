@@ -118,7 +118,7 @@ export default function ImageCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions className={classes.cardActions}>
-        <IconButton onClick={handleLike}>
+        <IconButton aria-label="like-button" onClick={handleLike}>
           {liked ? <LikeIconFilled color="secondary" /> : <LikeIcon />}
         </IconButton>
       </CardActions>
