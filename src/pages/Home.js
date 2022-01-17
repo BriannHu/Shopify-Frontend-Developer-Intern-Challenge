@@ -42,11 +42,12 @@ export default function Home() {
 
   useEffect(() => {
     const existingDarkState = localStorage.getItem("darkState");
-    if (existingDarkState) {
+    if (JSON.parse(existingDarkState) === true) {
       setDarkState(true);
+      localStorage.setItem("darkState", true);
     } else {
       setDarkState(false);
-      localStorage.setItem("darkState", "light");
+      localStorage.setItem("darkState", false);
     }
   }, []);
 
